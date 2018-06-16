@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation=""
+    tools:context=".SerachActivity">
+
+    <LinearLayout
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/edname"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="3"
+            android:hint="请输入搜索"
+            android:singleLine="true" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:background="#f89"
+            android:onClick="serach"
+            android:text="搜索" />
+    </LinearLayout>
+
+    <com.example.hp.wbyuekaomoni.view.Liushi
+        android:id="@+id/flowlayout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+    </com.example.hp.wbyuekaomoni.view.Liushi>
+
+    <TextView
+        android:id="@+id/jilu"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_below="@id/line"
+        android:gravity="center"
+        android:text="历史记录" />
+
+    <ListView
+        android:id="@+id/lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/jilu">
+    </ListView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="全部清除" />
+    </RelativeLayout>
+</LinearLayout>
